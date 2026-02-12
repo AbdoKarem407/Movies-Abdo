@@ -91,257 +91,100 @@ background:  linear-gradient(90deg, #2F6DB3, #4F8FD8)
 
 
 /* Responsive */
-@media (max-width: 992px) {
-  .box {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* ============= Base (Desktop First Grid) ============= */
+
+.movies-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin: 10vh auto 2vh;
+  width: 95%;
 }
 
-@media (max-width: 768px) {
-  .box {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.Cards {
+  width: 100%;
+  max-width: 22rem;
+  margin: auto;
 }
 
-@media (max-width: 480px) {
-  .box {
+.imgbanda {
+  height: 22vh;
+  object-fit: cover;
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 576px) {
+
+  .movies-row {
     grid-template-columns: 1fr;
   }
-}
-/* 280 and 575 */
-@media (min-width:280px) and (max-width:575px) {
-.movies-row {
-  display: flex;
-  flex-direction: column; /* تحت بعض */
-  align-items: center;     /* في النص أفقي */
-  margin-top: 10vh;
-  margin-bottom: 2vh;
-  margin-left: -0.5vh;
+
+  .btn-search {
+    display: none;
+  }
+
+  .navbar-toggler {
+    width: 45px;
+  }
+
+  .navbar-toggler-icon {
+    width: 25px;
+    height: 20px;
+  }
+
+  span {
+    font-size: 20px;
+  }
 }
 
-.imgbanda{
-  height: 20vh;
-  
-}
-.Cards{
-   width: 15rem;
-   height: auto;
-}
-.navbar-toggler-icon {
-  width: 26px !important;
-  height: 20px !important;
 
-}
-.navbar-toggler{
-  width: 50px !important;
-  
-}
-.btn-search{
-  display: none !important;
-}
-.me-2{
-  width: 250px !important;
-}
-}
-/* end */
-
-/* 575 and 767 */
- @media (min-width:575px) and (max-width: 767px) {
-  .movies-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* في النص أفقي */
-     padding-left: 1%;
-  margin-top: 10vh;
-  margin-bottom: 2vh;
-  padding-bottom: 10px;
-}
-.Cards{
-   width: 13rem;
-   height: auto;
-}
-span{
-  font-size: 29px;
-}
-.navbar-toggler-icon {
-  width: 29px !important;
-  height: 22px !important;
-
-}
-.navbar-toggler{
-  width: 80px !important;
-  
-}
-.btn-search{
-  display: none !important;
-}
-.me-2{
-  width: 700px !important;
-}
-
-}
-
-@media (min-width:605px) and (max-width:655px) {
-  
- .movies-row {
-     padding-left: 0%;
- 
-}
-.Cards{
-   width: 15rem;
-   height: auto;
-}
-}
- 
-@media (min-width:655px) and (max-width: 706px) {
-  
- .movies-row {
-     padding-left: 0.8%;
- 
-}
-.Cards{
-   width: 16rem;
-   height: auto;
-}
-.me-2{
-  font-size: 20px !important;
-}
-span{
-  font-size: 31px;
-}
-.navbar-toggler-icon {
-  width: 36px !important;
-  height: 30px !important;
-
-}
-}
-
-@media (min-width:706px) and (max-width: 767px) {
-  
- .movies-row {
-     padding-left: 1.2%;
- 
-}
-.Cards{
-   width: 17rem;
-   height: auto;
-}
-.me-2{
-  width: 800px !important;
-  height: 45px !important;
-}
-.navbar-toggler-icon {
-  width: 35px !important;
-  height: 25px !important;
-
-}
-.me-2{
-  font-size: 20px !important;
-}
-}
-/* end */
-
-/* 767 and 991 */
-  @media (min-width:767px) and (max-width: 992px) {
+/* ================= Tablet ================= */
+@media (min-width: 577px) and (max-width: 768px) {
 
   .movies-row {
-  display: grid;
-  grid-template-columns: repeat(2, 40.3%);  /* في النص أفقي */
-     padding-left:2.5%; 
-      gap: 70px;
-     place-items: center;
-  margin-top: 10vh;
-  margin-bottom: 2vh;
-  padding-bottom: 10px;
-  
-} 
- .Cards{
-   width: 21rem;
-   height: auto;
-   display: flex;
-   justify-content: center;
-   
-   
-}
-span{
-  font-size: 33px;
-}
-.navbar-toggler-icon {
-  width: 39px !important;
-  height: 34px !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-}
-.navbar-toggler{
-  width: 85px !important; 
+  .Cards {
+    max-width: 16rem;
+  }
 
-}
-.btn-search{
-  display: none !important;
-}
-.me-2{ 
- width: 900px !important;
-   height: 50px !important;
-  font-size: 22px !important;
+  span {
+    font-size: 26px;
+  }
 }
 
-} 
 
+/* ================= Small Laptop ================= */
+@media (min-width: 769px) and (max-width: 992px) {
 
-/* end */
-
-  
-@media (min-width:992px) and (max-width:1200px) {
- 
-.movies-row {
-  display: grid;
-  grid-template-columns: repeat(2, 40.3%);  /* في النص أفقي */
-     /* padding-left:2.5%; */
-     gap: 110px;
-     place-items: center;
-  margin-top: 10vh;
-  margin-bottom: 2vh;
-  padding-bottom: 10px;
-}
-.Cards{
-   width: 26rem;
-   height: auto;
-   display: flex;
-   justify-content: center;
-   
-   
-}
-span{
-  font-size: 50px;
-}
-
-.btn-search{
-  display: none !important;
-}
-.me-2{
- width: 400px !important;
-   height: 65px !important;
-  font-size: 28px !important;
-  margin-left: -180px ;
-  
-}
-.card-title{
-  font-size: 2.4rem !important;
-}
-.card-text{
-  font-size: 1.9rem !important;
-}
-}
-@media (min-width:1060px) and (max-width:1200px) {
   .movies-row {
-  display: grid;
-  grid-template-columns: repeat(2, 41.6%);  /* في النص أفقي */
- ;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .Cards {
+    max-width: 20rem;
+  }
+
+  span {
+    font-size: 30px;
+  }
 }
-  .Cards{
-   width: 28rem;
-   height: auto;
-   display: flex;
-   justify-content: center;
-   
-   
-}
+
+
+/* ================= Desktop ================= */
+@media (min-width: 993px) {
+
+  .movies-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Cards {
+    max-width: 26rem;
+  }
+
+  span {
+    font-size: 40px;
+  }
 }
